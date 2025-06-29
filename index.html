@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <h1>
+        WELCOME TO BAT BALL AND STUMP GAME
+    </h1>
+    <h3>Choose One of the 3 Bat, Ball Or Stump</h3>
+    <p>Rules: <br> This Game Rule is You Choose One Of Bat, Ball or Stump and Computer also choses One . If you Choose
+        Bat, The ball Loses. If you Choose Stump, the Bat Looses. If you Choose Ball, The Stump Loses. If you Choose
+        Stump, the Bat Looses and if both choose the Same it's a tie.
+        So let's get You Started. ☝️</p>
+
+    <button class="btn btn-secondary play-again" id="refreshBtn" onclick="localStorage.clear()
+    resetScore()
+    ">Play again</button>
+
+    <hr>
+
+
+    <button type="button" class="btn btn-success btn-lg roundbtn" onclick="
+        let computerChoice = generateComputerChoice();   
+        let resultMsg = getResult('Bat', computerChoice);
+        showResult('Bat', computerChoice, resultMsg)
+    ">🏏</button>
+
+    <button type="button" class="btn btn-danger btn-lg roundbtn" onclick="computerChoice = generateComputerChoice();
+    resultMsg = getResult('Ball', computerChoice);
+    showResult('Ball', computerChoice, resultMsg) ">⚾</button>
+
+    <button type="button" class="btn btn-warning btn-lg roundbtn" onclick="computerChoice =generateComputerChoice();
+        resultMsg = getResult('Stump', computerChoice);
+        showResult('Stump', computerChoice, resultMsg) "><img src="asserts/stump.webp" height="30px" alt="stump"></button>
+    <br><br>
+    <h3 id="user_move"></h3>
+    <h3 id="computer_move"></h3>
+    <h3 id="result"></h3>
+    <div class="box1">
+        <h3 id="score" class="scoreboard"></h3>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

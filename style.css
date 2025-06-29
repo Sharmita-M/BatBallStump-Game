@@ -1,0 +1,84 @@
+ body {
+            background-image: linear-gradient(rgb(169, 169, 233) , rgb(244, 244, 244)) ;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h1 {
+            color: #3436a6;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #dc3545;
+        }
+        .roundbtn {
+            transition: transform 0.2s;
+            width: 100px;
+            height: 100px;
+            font-size: 2rem !important;
+            border-radius: 50% !important;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        .play-again {
+            z-index: 99;
+            background-color: #768adc;
+            border-radius: none !important;
+            color: white;
+            position: fixed;
+            bottom: 1%;
+            right: 6%;
+            height: 6%;
+            width: 150px;
+            font-size: 18px;
+        }
+        .box1{
+            background-color: rgb(11, 28, 84);
+            height: 8%;
+            width: 100%;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            color: #fff;
+        }
+        .scoreboard{
+            float: left;
+            font-size: 18px;
+            margin-top: 1.2%;
+            margin-left: 8%;
+        }
+        @media (max-width: 576px) {
+            .roundbtn {
+                width: 60px;
+                height: 60px;
+                font-size: 1.2em;
+            }
+
+            .play-again {
+                width: 120px;
+                height: auto;
+                font-size: 16px;
+            }
+        }
